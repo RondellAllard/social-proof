@@ -1,0 +1,99 @@
+//Rating Cards
+.ratings_section {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  background-color: blue;
+}
+
+.rating {
+  text-align: center;
+
+  margin: 1em;
+  padding: 1em 1.5em 0.5em;
+  border-radius: 5px;
+
+  color: $clr-primary;
+  background-color: $clr-n-light;
+  @media (min-width: $bp-mobile) {
+    display: flex;
+    align-items: center;
+    // &:nth-child(1) {
+    //   justify-self: left;
+    // }
+    // &:nth-child(2) {
+    //   margin-right: auto;
+    // }
+    width: 30em;
+  }
+  .stars > * {
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+  }
+  p {
+    font-weight: 700;
+    @media (min-width: $bp-mobile) {
+      margin-left: 3em;
+    }
+  }
+}
+
+//Review Cards
+.review_section {
+  margin-top: 2em;
+}
+.card {
+  margin-bottom: 2em;
+  padding: 2em;
+  border-radius: 5px;
+
+  background-color: $clr-primary;
+
+  @media (min-width: $bp-mobile) {
+    height: 12em;
+    margin: 0 2em 5em;
+    &:nth-child(2) {
+      margin-top: 3em;
+    }
+    &:nth-child(3) {
+      margin-top: 6em;
+    }
+  }
+  img {
+    border-radius: 50%;
+    grid-area: avatar;
+  }
+
+  h2 {
+    font-size: 1em;
+    margin: 0.2em;
+    padding: 0.2em;
+    color: $clr-n-white;
+
+    grid-area: user;
+  }
+  h3 {
+    font-size: 1em;
+    margin: 0.2em;
+    padding: 0.2em;
+
+    color: $clr-secondary;
+
+    grid-area: status;
+  }
+  p {
+    margin-top: 2em;
+    color: $clr-n-white;
+
+    grid-area: review;
+  }
+  //grid
+  display: grid;
+  grid-template-areas:
+    "avatar user"
+    "avatar status"
+    "review review";
+  grid-template-columns: 6em 1fr;
+  grid-template-rows: 3em 1.5em auto;
+  align-items: end;
+}

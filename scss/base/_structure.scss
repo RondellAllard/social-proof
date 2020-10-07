@@ -1,0 +1,35 @@
+//Grid
+//Grid Names
+header {
+  grid-area: header;
+}
+
+.ratings_section {
+  grid-area: ratings;
+}
+
+.review_section {
+  grid-area: reviews;
+}
+
+//Grid form
+.grid {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  @media (min-width: $bp-mobile) {
+    display: grid;
+    grid-template-areas:
+      "header ratings ratings"
+      "reviews reviews reviews";
+  }
+}
+
+//Reviews Section
+.review_section {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $bp-mobile) {
+    flex-direction: row;
+  }
+}

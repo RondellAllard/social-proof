@@ -1,10 +1,28 @@
 /*===================================================================================
 ------------------------------------Base Styles----------------------------------
 ===================================================================================*/
+//Imported Style
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+// Type
+body {
+  font-family: $font-base;
+  background-color: $clr-n-white;
+}
+
+header {
+  text-align: center;
+  h1 {
+    color: $clr-primary;
+  }
+  .lead {
+    color: $clr-n-dark;
+    margin-bottom: 2em;
+  }
 }
