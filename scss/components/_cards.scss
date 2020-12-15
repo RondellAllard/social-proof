@@ -1,14 +1,28 @@
 //Rating Cards
+// Rating Grid
+
+.report {
+  @media (min-width: $bp-mobile) {
+    align-self: center;
+  }
+}
+
+.tech {
+  @media (min-width: $bp-mobile) {
+    align-self: flex-end;
+  }
+}
+
 .ratings_section {
   display: flex;
   flex-direction: column;
-  width: 900px;
-  background-color: blue;
+  @media (min-width: $bp-mobile) {
+    width: 750px;
+  }
 }
-
+// Rating style
 .rating {
   text-align: center;
-
   margin: 1em;
   padding: 1em 1.5em 0.5em;
   border-radius: 5px;
@@ -41,6 +55,7 @@
 //Review Cards
 .review_section {
   margin-top: 2em;
+  margin-right: 20px;
 }
 .card {
   margin-bottom: 2em;

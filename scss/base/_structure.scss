@@ -1,11 +1,11 @@
 //Grid
 //Grid Names
-header {
-  grid-area: header;
-}
 
 .ratings_section {
   grid-area: ratings;
+  @media (min-width: $bp-mobile) {
+    margin-right: 2rem;
+  }
 }
 
 .review_section {
@@ -20,7 +20,7 @@ header {
   @media (min-width: $bp-mobile) {
     display: grid;
     grid-template-areas:
-      "header ratings ratings"
+      "header . ratings"
       "reviews reviews reviews";
   }
 }
